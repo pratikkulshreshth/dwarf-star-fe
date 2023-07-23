@@ -1,16 +1,15 @@
 {
-  "name": "material-dashboard-2-react",
-  "version": "2.2.0",
+  "name": "dwarf-star-fe",
+  "version": "0.0.1",
   "private": true,
-  "author": "Creative Tim",
-  "license": "See license in https://www.creative-tim.com/license",
-  "description": "React version of Material Dashboard 2 by Creative Tim",
+  "author": "Pratik Kulshreshth",
+  "description": "UI for DWARF STAR project",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/material-dashboard-react/issues"
+    "url": ""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/material-dashboard-react.git"
+    "url": "git+https://github.com/pratikkulshreshth/dwarf-star-fe.git"
   },
   "dependencies": {
     "@emotion/cache": "11.10.8",
@@ -18,8 +17,10 @@
     "@emotion/styled": "11.10.8",
     "@mui/icons-material": "5.11.16",
     "@mui/material": "5.12.3",
+    "axios": "^1.4.0",
     "chart.js": "4.3.0",
     "chroma-js": "2.4.2",
+    "moment": "^2.29.4",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-chartjs-2": "5.2.0",
@@ -33,8 +34,8 @@
     "yup": "1.1.1"
   },
   "scripts": {
-    "start": "GENERATE_SOURCEMAP=false react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
