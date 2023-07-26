@@ -116,6 +116,17 @@ export default function App() {
       }
 
       if (route.route) {
+        if (route.children) {
+          return (
+            <Route exact path={route.route} element={route.component} key={route.key}>
+              <Route path={route.route} element={<Navigate to={route.defaultChild} />} />
+              {route.children.map((child) => (
+                <Route exact path={child.route} element={child.component} key={child.key} />
+              ))}
+            </Route>
+          );
+        }
+
         return <Route exact path={route.route} element={route.component} key={route.key} />;
       }
 

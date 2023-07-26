@@ -1,3 +1,5 @@
+// noinspection ES6UnusedImports
+
 /**
 =========================================================
 * Material Dashboard 2 React - v2.2.0
@@ -49,6 +51,8 @@ import SignUp from "layouts/authentication/sign-up";
 import Icon from "@mui/material/Icon";
 import Doctors from "./layouts/doctors";
 import Patients from "./layouts/patients";
+import DoctorsAdd from "./layouts/doctors/DoctorsAdd";
+import DoctorsList from "./layouts/doctors/DoctorsList";
 
 const navBarRoutes = [
   {
@@ -66,6 +70,23 @@ const navBarRoutes = [
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/doctors",
     component: <Doctors />,
+    defaultChild: "/doctors/list",
+    children: [
+      {
+        name: "List Doctor",
+        key: "doctors_list",
+        icon: <Icon fontSize="small">table_view</Icon>,
+        route: "list",
+        component: <DoctorsList />,
+      },
+      {
+        name: "Add Doctor",
+        key: "doctors_add",
+        icon: <Icon fontSize="small">table_view</Icon>,
+        route: "add",
+        component: <DoctorsAdd />,
+      },
+    ],
   },
   {
     type: "collapse",

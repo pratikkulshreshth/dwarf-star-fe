@@ -5,3 +5,10 @@ export const getDoctors = () =>
     url: "/doctor",
     method: "GET",
   });
+
+export const postDoctor = (data) =>
+  client.request({
+    url: "/doctor",
+    method: "POST",
+    data,
+  });
